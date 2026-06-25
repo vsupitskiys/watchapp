@@ -64,7 +64,7 @@ function renderGrid() {
     return `
     <div class="watch-card ${isSelected ? "selected" : ""}" data-id="${w.id}">
       <div class="card-img-wrap">
-        <img src="${w.image}" alt="${w.brand} ${w.model}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1548171915-e79a6a8bfce9?w=400&h=400&fit=crop'">
+        <img src="${w.image}" alt="${w.brand} ${w.model}" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=400&h=300&fit=crop&q=80'">
         <span class="card-category">${w.category}</span>
         <span class="select-check">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -134,7 +134,7 @@ function renderCompareBar() {
     const w = WATCHES.find(x => x.id === id);
     return `
     <div class="compare-slot">
-      <img src="${w.image}" alt="${w.brand}" onerror="this.src='https://images.unsplash.com/photo-1548171915-e79a6a8bfce9?w=400&h=400&fit=crop'">
+      <img src="${w.image}" alt="${w.brand}" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=80&h=80&fit=crop&q=80'">
       <div>
         <div class="compare-slot-brand">${w.brand}</div>
         <div class="compare-slot-name">${w.model}</div>
@@ -165,7 +165,7 @@ function renderCompareModal() {
   const headers = watches.map((w, i) => `
     <th>
       <div class="th-watch-header">
-        <img class="th-watch-img" src="${w.image}" alt="${w.brand}" onerror="this.src='https://images.unsplash.com/photo-1548171915-e79a6a8bfce9?w=400&h=400&fit=crop'">
+        <img class="th-watch-img" src="${w.image}" alt="${w.brand}" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=160&h=160&fit=crop&q=80'">
         <div class="th-brand">${w.brand}</div>
         <div class="th-model">${w.model}</div>
         <div class="th-ref">${w.ref}</div>
