@@ -251,7 +251,9 @@ function toggleSelect(id) {
     }
     selected.push(id);
   }
-  renderGrid();
+  const isNowSelected = selected.includes(id);
+  document.querySelector(`.watch-card[data-id="${id}"]`)
+    ?.classList.toggle("selected", isNowSelected);
   renderCompareBar();
 }
 
