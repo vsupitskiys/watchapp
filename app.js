@@ -86,8 +86,8 @@ function renderGrid() {
             <div class="spec-value">${w.waterResistance}m</div>
           </div>
           <div class="spec-pill">
-            <div class="spec-label">Movement</div>
-            <div class="spec-value">${w.movement}</div>
+            <div class="spec-label">Year</div>
+            <div class="spec-value">${w.year}</div>
           </div>
           <div class="spec-pill">
             <div class="spec-label">Power Res.</div>
