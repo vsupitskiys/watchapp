@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WatchVault — Compare Watches</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ── Header ────────────────────────────────────── -->
+<header>
+  <div class="logo">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"/>
+      <polyline points="12 6 12 12 16 14"/>
+    </svg>
+    WatchVault
+  </div>
+  <div class="header-right">
+    <div class="search-wrap">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      <input id="search-input" type="search" placeholder="Search brand or model…" autocomplete="off">
+    </div>
+    <select id="category-filter"></select>
+    <select id="sort-select">
+      <option value="brand">Sort: Brand A–Z</option>
+      <option value="price-asc">Sort: Price Low–High</option>
+      <option value="price-desc">Sort: Price High–Low</option>
+      <option value="diameter">Sort: Case Size</option>
+      <option value="power">Sort: Power Reserve</option>
+      <option value="water">Sort: Water Resistance</option>
+    </select>
+  </div>
+</header>
+
+<!-- ── Main ──────────────────────────────────────── -->
+<main>
+  <div class="section-header">
+    <h1 class="section-title">Watch Collection</h1>
+    <span id="watch-count" class="count-badge"></span>
+  </div>
+  <div id="watch-grid" class="watch-grid"></div>
+</main>
+
+<!-- ── Compare Bar ────────────────────────────────── -->
+<div id="compare-bar">
+  <div id="compare-slots" class="compare-bar-slots"></div>
+  <span id="compare-hint" class="compare-hint"></span>
+  <div class="compare-bar-actions">
+    <button id="clear-btn" class="btn btn-ghost">Clear</button>
+    <button id="compare-btn" class="btn btn-primary" disabled>Compare</button>
+  </div>
+</div>
+
+<!-- ── Compare Modal ──────────────────────────────── -->
+<div id="compare-modal" role="dialog" aria-modal="true" aria-label="Watch Comparison">
+  <div class="modal-inner">
+    <div class="modal-header">
+      <span class="modal-title">Side-by-Side Comparison</span>
+      <button id="modal-close" class="modal-close" aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M18 6 6 18M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <div class="compare-table-wrap">
+      <table id="compare-table-body" class="compare-table"></table>
+    </div>
+  </div>
+</div>
+
+<script src="watches.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
